@@ -29,11 +29,11 @@ func make_str_slice(square_str string) []string {
 }
 
 func make_check_num(square_slice []string, digit int) (check_num int) {
-	str_num_a := square_slice[0:(digit / 2)]
-	str_num_b := square_slice[(digit / 2):digit]
-	int_num_a, _ := strconv.Atoi(strings.Join(str_num_a, ""))
-	int_num_b, _ := strconv.Atoi(strings.Join(str_num_b, ""))
-	check_num = int_num_a + int_num_b
+	str_num_head := square_slice[0:(digit / 2)]
+	str_num_tail := square_slice[(digit / 2):digit]
+	int_num_head, _ := strconv.Atoi(strings.Join(str_num_head, ""))
+	int_num_tail, _ := strconv.Atoi(strings.Join(str_num_tail, ""))
+	check_num = int_num_head + int_num_tail
 	return
 }
 
